@@ -41,7 +41,7 @@ Model {
       UnitExpr		      "inherit"
     }
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.139"
+    ComputedModelVersion    "1.140"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -113,8 +113,8 @@ Model {
 	  LoadSaveID		  "0"
 	  Extents		  [2515.0, 1115.0]
 	  ZoomFactor		  [2.5]
-	  Offset		  [159.16955036253864, -16.56547156339235]
-	  SceneRectInView	  [159.16955036253864, -16.56547156339235, 804.8, 356.8]
+	  Offset		  [342.97145512444433, 58.428695617860996]
+	  SceneRectInView	  [342.97145512444433, 58.428695617860996, 804.8, 356.8]
 	}
 	Object {
 	  $ObjectID		  6
@@ -156,13 +156,13 @@ Model {
 	Dimension		3
 	Object {
 	  $ObjectID		  9
-	  Type			  "Simulink:Editor:ReferencedFiles"
-	  ID			  "Referenced Files"
+	  Type			  "GLUE2:PropertyInspector"
+	  ID			  "Property Inspector"
 	  Visible		  [0]
 	  CreateCallback	  ""
-	  UserData		  "{\"filterShowRefModels\":\"true\",\"filterShowRefSubs\":\"true\",\"filterShowOnlyDirtyFiles\":\"false\"}\n"
+	  UserData		  ""
 	  Floating		  [0]
-	  DockPosition		  "Left"
+	  DockPosition		  "Right"
 	  Width			  [512]
 	  Height		  [384]
 	  Minimized		  "Unset"
@@ -182,13 +182,13 @@ Model {
 	}
 	Object {
 	  $ObjectID		  11
-	  Type			  "GLUE2:PropertyInspector"
-	  ID			  "Property Inspector"
+	  Type			  "Simulink:Editor:ReferencedFiles"
+	  ID			  "Referenced Files"
 	  Visible		  [0]
 	  CreateCallback	  ""
-	  UserData		  ""
+	  UserData		  "{\"filterShowRefModels\":\"true\",\"filterShowRefSubs\":\"true\",\"filterShowOnlyDirtyFiles\":\"false\"}\n"
 	  Floating		  [0]
-	  DockPosition		  "Right"
+	  DockPosition		  "Left"
 	  Width			  [512]
 	  Height		  [384]
 	  Minimized		  "Unset"
@@ -221,9 +221,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "viran"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Dec 03 19:16:47 2020"
-  RTWModifiedTimeStamp	  528923804
-  ModelVersionFormat	  "%<AutoIncrement:1.139>"
+  LastModifiedDate	  "Fri Dec 04 14:41:47 2020"
+  RTWModifiedTimeStamp	  528992413
+  ModelVersionFormat	  "%<AutoIncrement:1.140>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "none"
@@ -2916,7 +2916,7 @@ Model {
       Name		      "rad2deg"
       SID		      "56"
       Ports		      [1, 1]
-      Position		      [670, 121, 695, 149]
+      Position		      [670, 116, 695, 144]
       ZOrder		      -17
       ForegroundColor	      "red"
       BackgroundColor	      "yellow"
@@ -3339,7 +3339,6 @@ Model {
       ZOrder		      1
       SrcBlock		      "Mux4"
       SrcPort		      1
-      Points		      [33, 0; 0, 5]
       DstBlock		      "rad2deg"
       DstPort		      1
     }
@@ -3384,7 +3383,6 @@ Model {
       Labels		      [0, 0]
       SrcBlock		      "rad2deg"
       SrcPort		      1
-      Points		      [23, 0; 0, -5]
       DstBlock		      "y"
       DstPort		      1
     }
@@ -3485,7 +3483,7 @@ Model {
     Annotation {
       SID		      "82"
       Name		      "npos\nepos\nalt\nphi\ntheta\npsi\nvel\nalpha\nbeta\np\nq\nr\nnx\nny\nnz\nmach\nqbar\nps\n"
-      Position		      [642, 233, 664, 406]
+      Position		      [671, 179, 693, 352]
       InternalMargins	      [0, 0, 0, 0]
       ForegroundColor	      "blue"
       ZOrder		      -1
