@@ -287,6 +287,7 @@ title(title_string);
 sgrid;
 
 % Create Bode Plots
+
 omega = logspace(-2,2,100);
 
 sysg_lat_hi = frsp(sys_lat_hi,omega);
