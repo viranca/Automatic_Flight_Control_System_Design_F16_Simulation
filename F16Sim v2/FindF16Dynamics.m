@@ -305,7 +305,7 @@ for state = 1:1:5
         vplot('bode', sel(sysg_long_hi,state,control), 'b--', sel(sysg_long_lo,state,control), 'r');
         disp(title_string);
         legend('hifi', 'lofi');
-        pause;
+ 
     end
 end
 
@@ -316,6 +316,6 @@ for state = 1:1:6
         vplot('bode', sel(sysg_lat_hi,state,control), 'b--', sel(sysg_lat_lo,state,control), 'r');
         disp(title_string);
         legend('hifi', 'lofi');
-        pause;
+       
     end
 end

@@ -104,7 +104,7 @@ Model {
       }
       Array {
 	Type			"Simulink.EditorInfo"
-	Dimension		2
+	Dimension		3
 	Object {
 	  $ObjectID		  5
 	  IsActive		  [1]
@@ -112,12 +112,23 @@ Model {
 	  ViewObjType		  "SimulinkTopLevel"
 	  LoadSaveID		  "0"
 	  Extents		  [2515.0, 1115.0]
-	  ZoomFactor		  [1.0]
-	  Offset		  [-334.02101134592237, 0.57924690927275169]
-	  SceneRectInView	  [-334.02101134592237, 0.57924690927275169, 2012.0, 892.0]
+	  ZoomFactor		  [0.8]
+	  Offset		  [-361.23255513368531, -130.64729963578446]
+	  SceneRectInView	  [-361.23255513368531, -130.64729963578446, 2515.0, 1115.0]
 	}
 	Object {
 	  $ObjectID		  6
+	  IsActive		  [0]
+	  IsTabbed		  [0]
+	  ViewObjType		  "SimulinkSubsys"
+	  LoadSaveID		  "7"
+	  Extents		  [2515.0, 1115.0]
+	  ZoomFactor		  [2.0]
+	  Offset		  [-251.91428571428554, -129.78571428571431]
+	  SceneRectInView	  [-251.91428571428554, -129.78571428571431, 1006.0, 446.0]
+	}
+	Object {
+	  $ObjectID		  7
 	  IsActive		  [0]
 	  IsTabbed		  [0]
 	  ViewObjType		  "SimulinkSubsys"
@@ -133,7 +144,7 @@ Model {
 	Type			"Simulink.DockComponentInfo"
 	Dimension		2
 	Object {
-	  $ObjectID		  7
+	  $ObjectID		  8
 	  Type			  "GLUE2:PropertyInspector"
 	  ID			  "Property Inspector"
 	  Visible		  [0]
@@ -146,7 +157,7 @@ Model {
 	  Minimized		  "Unset"
 	}
 	Object {
-	  $ObjectID		  8
+	  $ObjectID		  9
 	  Type			  "Simulink:Editor:ReferencedFiles"
 	  ID			  "Referenced Files"
 	  Visible		  [0]
@@ -186,7 +197,7 @@ Model {
   LastModifiedBy	  "viran"
   ModifiedDateFormat	  "%<Auto>"
   LastModifiedDate	  "Sun Jan 31 12:21:49 2021"
-  RTWModifiedTimeStamp	  533996389
+  RTWModifiedTimeStamp	  533998726
   ModelVersionFormat	  "%<AutoIncrement:1.141>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -244,7 +255,7 @@ Model {
   TryForcingSFcnDF	  off
   Object {
     $PropName		    "DataLoggingOverride"
-    $ObjectID		    9
+    $ObjectID		    10
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
     model_		    "LIN_F16Block"
     Array {
@@ -290,7 +301,7 @@ Model {
     Type		    "Handle"
     Dimension		    1
     Simulink.ConfigSet {
-      $ObjectID		      10
+      $ObjectID		      11
       Version		      "20.1.0"
       DisabledProps	      []
       Description	      ""
@@ -298,7 +309,7 @@ Model {
 	Type			"Handle"
 	Dimension		9
 	Simulink.SolverCC {
-	  $ObjectID		  11
+	  $ObjectID		  12
 	  Version		  "20.1.0"
 	  DisabledProps		  []
 	  Description		  ""
@@ -340,19 +351,19 @@ Model {
 	  ODENIntegrationMethod	  "ode3"
 	}
 	Simulink.DataIOCC {
-	  $ObjectID		  12
+	  $ObjectID		  13
 	  Version		  "20.1.0"
 	  DisabledProps		  []
 	  Description		  ""
 	  Components		  []
 	  Decimation		  "50"
-	  ExternalInput		  "[t, u]"
+	  ExternalInput		  "[0 2120.62144781522 -2.46068617229408 1.95763944454331e-15 3.64793526166284e-14]"
 	  FinalStateName	  "xFinal"
-	  InitialState		  "xInitial"
+	  InitialState		  "[]"
 	  LimitDataPoints	  off
 	  MaxDataPoints		  "1000"
-	  LoadExternalInput	  off
-	  LoadInitialState	  off
+	  LoadExternalInput	  on
+	  LoadInitialState	  on
 	  SaveFinalState	  off
 	  SaveOperatingPoint	  off
 	  SaveFormat		  "Array"
@@ -382,7 +393,7 @@ Model {
 	  LoggingIntervals	  "[-inf, inf]"
 	}
 	Simulink.OptimizationCC {
-	  $ObjectID		  13
+	  $ObjectID		  14
 	  Version		  "20.1.0"
 	  Array {
 	    Type		    "Cell"
@@ -403,7 +414,7 @@ Model {
 	  BlockReduction	  on
 	  BooleanDataType	  off
 	  ConditionallyExecuteInputs on
-	  DefaultParameterBehavior "Tunable"
+	  DefaultParameterBehavior "Inlined"
 	  UseDivisionForNetSlopeComputation "off"
 	  GainParamInheritBuiltInType off
 	  UseFloatMulNetSlope	  off
@@ -411,7 +422,7 @@ Model {
 	  UseSpecifiedMinMax	  off
 	  InlineInvariantSignals  off
 	  OptimizeBlockIOStorage  on
-	  BufferReuse		  on
+	  BufferReuse		  off
 	  EnhancedBackFolding	  off
 	  CachingGlobalReferences off
 	  GlobalBufferReuse	  on
@@ -456,7 +467,7 @@ Model {
 	  EfficientTunableParamExpr off
 	}
 	Simulink.DebuggingCC {
-	  $ObjectID		  14
+	  $ObjectID		  15
 	  Version		  "20.1.0"
 	  Array {
 	    Type		    "Cell"
@@ -543,7 +554,7 @@ Model {
 	  ChecksumConsistencyForSSReuse	"none"
 	  PregeneratedLibrarySubsystemCodeDiagnostic "warning"
 	  MatchCodeGenerationContextForUpdateDiagram "none"
-	  InitInArrayFormatMsg	  "warning"
+	  InitInArrayFormatMsg	  "none"
 	  StrictBusMsg		  "ErrorLevel1"
 	  BusNameAdapt		  "WarnAndRepair"
 	  NonBusSignalsTreatedAsBus "none"
@@ -579,7 +590,7 @@ Model {
 	  VariantConditionMismatch "none"
 	}
 	Simulink.HardwareCC {
-	  $ObjectID		  15
+	  $ObjectID		  16
 	  Version		  "20.1.0"
 	  DisabledProps		  []
 	  Description		  ""
@@ -629,7 +640,7 @@ Model {
 	  HardwareBoardFeatureSet "EmbeddedCoderHSP"
 	}
 	Simulink.ModelReferenceCC {
-	  $ObjectID		  16
+	  $ObjectID		  17
 	  Version		  "20.1.0"
 	  DisabledProps		  []
 	  Description		  ""
@@ -649,7 +660,7 @@ Model {
 	  SupportModelReferenceSimTargetCustomCode off
 	}
 	Simulink.SFSimCC {
-	  $ObjectID		  17
+	  $ObjectID		  18
 	  Version		  "20.1.0"
 	  DisabledProps		  []
 	  Description		  ""
@@ -693,7 +704,7 @@ Model {
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
-	  $ObjectID		  18
+	  $ObjectID		  19
 	  Version		  "20.1.0"
 	  Array {
 	    Type		    "Cell"
@@ -799,7 +810,7 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
-	      $ObjectID		      19
+	      $ObjectID		      20
 	      Version		      "20.1.0"
 	      Array {
 		Type			"Cell"
@@ -889,7 +900,7 @@ Model {
 	    }
 	    Simulink.GRTTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
-	      $ObjectID		      20
+	      $ObjectID		      21
 	      Version		      "20.1.0"
 	      Array {
 		Type			"Cell"
@@ -993,7 +1004,7 @@ Model {
 	  }
 	}
 	SlCovCC.ConfigComp {
-	  $ObjectID		  21
+	  $ObjectID		  22
 	  Version		  "20.1.0"
 	  DisabledProps		  []
 	  Description		  "Simulink Coverage Configuration Component"
@@ -1042,11 +1053,11 @@ Model {
   }
   Simulink.ConfigSet {
     $PropName		    "ActiveConfigurationSet"
-    $ObjectID		    10
+    $ObjectID		    11
   }
   Object {
     $PropName		    "DataTransfer"
-    $ObjectID		    22
+    $ObjectID		    23
     $ClassName		    "Simulink.GlobalDataTransfer"
     DefaultTransitionBetweenSyncTasks "Ensure deterministic transfer (maximum delay)"
     DefaultTransitionBetweenAsyncTasks "Ensure data integrity only"
@@ -1360,9 +1371,9 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "100"
+    ZoomFactor		    "80"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "118"
+    SIDHighWatermark	    "120"
     SimulinkSubDomain	    "Simulink"
     Block {
       BlockType		      Inport
@@ -1601,7 +1612,7 @@ Model {
       RequestExecContextInheritance off
       System {
 	Name			"Elevator\nActuator"
-	Location		[210, 147, 849, 557]
+	Location		[-7, -7, 2055, 1119]
 	SystemRect		[0.000000, 0.000000, 0.000000, 0.000000]
 	Open			off
 	PortBlocksUseCompactNotation off
@@ -1617,7 +1628,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"100"
+	ZoomFactor		"200"
 	SIDHighWatermark	"5"
 	SimulinkSubDomain	"Simulink"
 	Block {
@@ -1673,7 +1684,7 @@ Model {
 	  ZOrder		  1
 	  SrcBlock		  "Integrator\n"
 	  SrcPort		  1
-	  Points		  [0, 0; 20, 0]
+	  Points		  [20, 0]
 	  Branch {
 	    ZOrder		    2
 	    Points		    [0, 95; -260, 0]
@@ -3723,7 +3734,7 @@ Model {
     Annotation {
       SID		      "84"
       Name		      "Nonlinear Equations of plant :\nRef : Aircraft Control & Simulation\n- Stevens & Lewis"
-      Position		      [138, 293, 288, 331]
+      Position		      [170, 305, 320, 343]
       InternalMargins	      [0, 0, 0, 0]
       ForegroundColor	      "blue"
       ZOrder		      -3
