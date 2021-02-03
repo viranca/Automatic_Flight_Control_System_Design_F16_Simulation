@@ -4,7 +4,6 @@
 
 clear all
 load('300fts20000ft.mat')
-s = tf('s');
 
 %% Determine the longitudinal and lateral reduced state space model
 %%
@@ -20,82 +19,82 @@ lateral_D = D_lateral_lo([4 1 5 6], [1 2]);
 
 save('Reduced_system','longitudinal_A', 'longitudinal_B', 'longitudinal_C', 'longitudinal_D')
 
-%% Steady state system for both models and damped
+%% Steady state system for both models and finding the eigenvectors
 %%
 ss_longitudinal = ss(longitudinal_A, longitudinal_B, longitudinal_C, longitudinal_D);
 ss_lateral = ss(lateral_A, lateral_B, lateral_C, lateral_D);
-[Wn_long, zeta_long, P_long] = damp(ss_longitudinal);
-[Wn_lat, zeta_lat, P_lat] = damp(ss_lateral)
+
+[eigenvectors_longitudinal, eigenvalues_longitudinal] = eig(longitudinal_A);
+[eigenvectors_lateral, eigenvalues_lateral] = eig(lateral_A);
+
+eigenvalue_shortperiod = eigenvalues_longitudinal(1, 1);
+eigenvalue_phugoid = eigenvalues_longitudinal(3, 3);
+eigenvalue_dutchroll = eigenvalues_lateral(1, 1);
+eigenvalue_aperiodicroll = eigenvalues_lateral(3, 3);
+eigenvalue_spiral = eigenvalues_lateral(4, 4);
 
 %% Calculate natural frequency, damping ratio, period, and the time to damp to half the amplitude for periodic eigenmotions
 %%
-
-% Poles
-P_shortperiod_index = find(real(P_long) == min(real(P_long)));
-P_phugoid_index = find(real(P_long) == max(real(P_long)));
-P_dutchroll_index = find(imag(P_lat) ~= 0.0);
-
 % Natural frequency
-Wn_shortperiod = unique(Wn_long(P_shortperiod_index));
-Wn_phugoid = unique(Wn_long(P_phugoid_index));
-Wn_dutchroll = unique(Wn_lat(P_dutchroll_index));
+shortperiod_natfreq = sqrt((real(eigenvalue_shortperiod))^2 + (imag(eigenvalue_shortperiod))^2);
+phugoid_natfreq = sqrt((real(eigenvalue_phugoid))^2 + (imag(eigenvalue_phugoid))^2);
+dutchroll_natfreq = sqrt((real(eigenvalue_dutchroll))^2 + (imag(eigenvalue_dutchroll))^2);
 
 % Damping ratio
-zeta_shortperiod = unique(zeta_long(P_shortperiod_index));
-zeta_phugoid = unique(zeta_long(P_phugoid_index));
-zeta_dutchroll = unique(zeta_lat(P_dutchroll_index));
+shortperiod_damping = -real(eigenvalue_shortperiod) / shortperiod_natfreq;
+phugoid_damping = -real(eigenvalue_phugoid) / phugoid_natfreq;
+dutchroll_damping = -real(eigenvalue_dutchroll) / dutchroll_natfreq;
 
 % Period
-period_shortperiod = 2*pi/imag(P_long(P_shortperiod_index));
-period_phugoid = 2*pi/imag(P_long(P_phugoid_index));
-period_dutchroll = 2*pi/imag(P_lat(P_dutchroll_index));
+shortperiod_period = (2*pi)/imag(eigenvalue_shortperiod);
+phugoid_period = (2*pi)/imag(eigenvalue_phugoid);
+dutchroll_period = (2*pi)/imag(eigenvalue_dutchroll);
 
 % Time to damp to half the amplitude
-T1_2_shortperiod = log(1/2)/real(P_long(P_shortperiod_index));
-T1_2_phugoid = log(1/2)/real(P_long(P_phugoid_index));
-T1_2_dutchroll = log(1/2)/real(P_lat(P_dutchroll_index));
+shortperiod_amplhalf = log(1/2)/real(eigenvalue_shortperiod);
+phugoid_amplhalf = log(1/2)/real(eigenvalue_phugoid);
+dutchroll_amplhalf = log(1/2)/real(eigenvalue_dutchroll);
+
+periodic_motions = [[shortperiod_natfreq, shortperiod_damping, shortperiod_period, shortperiod_amplhalf]
+                    [phugoid_natfreq, phugoid_damping, phugoid_period, phugoid_amplhalf]
+                    [dutchroll_natfreq, dutchroll_damping, dutchroll_period, dutchroll_amplhalf]];
 
 %% Calculate natural frequency, time constant and time to damp to half the amplitude for aperiodic eigenmotions
 %%
-
-% Poles
-P_aperiodic_index = find(real(P_lat) == min(real(P_lat)));
-P_spiral_index = find(real(P_lat) == max(real(P_lat)));
-
 % Natural frequency
-Wn_aperiodic = unique(Wn_lat(P_aperiodic_index));
-Wn_spiral = unique(Wn_lat(P_spiral_index));
+aperiodicroll_natfreq = sqrt((real(eigenvalue_aperiodicroll))^2 + (imag(eigenvalue_aperiodicroll))^2);
+spiral_natfreq = sqrt((real(eigenvalue_spiral))^2 + (imag(eigenvalue_spiral))^2);
 
 % Time constant
-tau_aperiodic = -1/P_lat(P_aperiodic_index);
-tau_spiral = -1/P_lat(P_spiral_index);
+aperiodicroll_timecon= 1/aperiodicroll_natfreq;
+spiral_timecon = 1/spiral_natfreq;
 
 % Time to damp to half the amplitude
-T1_2_aperiodic = log(1/2)/real(P_lat(P_aperiodic_index));
-T1_2_spiral = log(1/2)/real(P_lat(P_spiral_index));
+aperiodicroll_amplhalf = log(1/2)/real(eigenvalue_aperiodicroll);
+spiral_amplhalf = log(1/2)/real(eigenvalue_spiral);
 
-%% Step responses
+aperiodic_motions = [[aperiodicroll_natfreq, aperiodicroll_timecon, aperiodicroll_amplhalf]
+                     [spiral_natfreq, spiral_timecon, spiral_amplhalf]];
+
+%% Time responses plotted
 %%
-
 % Options for step responses
-opt_shortperiod_phugoid = stepDataOptions('InputOffset',[0 0] ,'StepAmplitude', [ 0 -1]);
-opt_aperiodic_spiral = stepDataOptions('InputOffset',[0 0 0] ,'StepAmplitude', [ 0 -1 0]);
+opt_neg_el = stepDataOptions('InputOffset', 0 ,'StepAmplitude', -1);
+opt_aileron = stepDataOptions('InputOffset', 0 ,'StepAmplitude', -1);
 
-% Timespans for the different eigenmotions
-t_shortperiod = 0:0.1:10;
-t_phugoid = 0:0.1:1500;
-t_dutchroll = 0:0.1:50;
-t_aperiodic = 0:0.1:10;
-t_spiral = 0:0.1:1000;
+% Time spans
+shortperiod_time =  0:0.1:10;
+phugoid_time =      0:0.1:750;
+dutchroll_time =    0:0.1:200;
+aperiodicroll_time= 0:0.1:10;
+spiral_time =       0:0.1:750;
 
-% Create responses
-[y_shortperiod, t_shortperiod] = step(ss_longitudinal, opt_shortperiod_phugoid, t_shortperiod);
-[y_phugoid, t_phugoid] = step(ss_longitudinal, opt_shortperiod_phugoid, t_phugoid);
-[y_dutchroll, t_dutchroll] =  impulse(ss_lateral);
-[y_aperiodic, t_aperiodic] = step(ss_lateral, opt_aperiodic_spiral, t_aperiodic);
-[y_spiral, t_spiral] = step(ss_lateral, opt_aperiodic_spiral, t_spiral);
-
-
+% Time responses
+[shortperiod_y, shortperiod_time] = step(ss_longitudinal, opt_neg_el, shortperiod_time);
+[phugoid_y, phugoid_time] = step(ss_longitudinal, opt_neg_el, phugoid_time);
+[dutchroll_y, dutchroll_time] =  impulse(ss_lateral);
+[aperiodic_y, aperiodicroll_time] = step(ss_lateral, opt_aileron, aperiodicroll_time);
+[spiral_y, spiral_time] = step(ss_lateral, opt_aileron, spiral_time);
 
 %% Plotting the results
 %%
@@ -103,67 +102,85 @@ t_spiral = 0:0.1:1000;
 % Periodic eigenmotions
 % Short period
 figure
-plot(t_shortperiod, y_shortperiod(:,1,2))
+plot(shortperiod_time, shortperiod_y(:, 3), 'LineWidth', 1)
 xlabel('Time [s]')
 ylabel('Pitch angle [deg]')
 title('Pitch angle for the short period eigenmotion')
+grid
 
 figure
-plot(t_shortperiod, y_shortperiod(:,4,2))
+plot(shortperiod_time, shortperiod_y(:, 4), 'LineWidth', 1)
 xlabel('Time [s]')
 ylabel('Pitch rate [deg/s]')
 title('Pitch rate for the short period eigenmotion')
+grid
 
 % Phugoid
 figure
-plot(t_phugoid, y_phugoid(:,1,2))
+plot(phugoid_time, phugoid_y(:, 3), 'LineWidth', 1)
 xlabel('Time [s]')
 ylabel('Pitch angle [deg]')
 title('Pitch angle for the phugoid eigenmotion')
+grid
+xlim([0 600])
 
 figure
-plot(t_phugoid, y_phugoid(:,4,2))
+plot(phugoid_time, phugoid_y(:, 4), 'LineWidth', 1)
 xlabel('Time [s]')
 ylabel('Pitch rate [deg/s]')
 title('Pitch rate for the phugoid eigenmotion')
+grid
+xlim([0 600])
 
 % Dutch roll
 figure
-plot(t_dutchroll, y_dutchroll(:,3,3))
+plot(dutchroll_time, dutchroll_y(:, 3), 'LineWidth', 1)
 xlabel('Time [s]')
 ylabel('Roll rate [deg/s]')
 title('Roll rate for the Dutch roll eigenmotion')
+grid
+xlim([0 150])
+
 
 figure
-plot(t_dutchroll, y_dutchroll(:,4,3))
+plot(dutchroll_time, dutchroll_y(:, 4), 'LineWidth', 1)
 xlabel('Time [s]')
 ylabel('Yaw rate [deg/s]')
 title('Yaw rate for the Dutch roll eigenmotion')
+grid
+xlim ([0 150])
+ylim ([-2 2])
 
 % Aperiodic eigenmotions
 % Aperiodic roll
 figure
-plot(t_aperiodic, y_aperiodic(:,1,2))
+plot(aperiodicroll_time, aperiodic_y(:, 2), 'LineWidth', 1)
 xlabel('Time [s]')
 ylabel('Roll angle [deg]')
 title('Roll angle for the aperiodic roll eigenmotion')
+grid
 
 figure
-plot(t_aperiodic, y_aperiodic(:,3,2))
+plot(aperiodicroll_time, aperiodic_y(:, 3), 'LineWidth', 1)
 xlabel('Time [s]')
 ylabel('Roll rate [deg/s]')
 title('Roll rate for the aperiodic roll eigenmotion')
+grid
 
 % Spiral
 figure
-plot(t_spiral, y_spiral(:,1,2))
+plot(spiral_time, spiral_y(:, 2), 'LineWidth', 1)
 xlabel('Time [s]')
 ylabel('Roll angle [deg]')
 title('Roll angle for the spiral eigenmotion')
+grid
+xlim([0 600])
 
 figure
-plot(t_spiral, y_spiral(:,3,2))
+plot(spiral_time, spiral_y(:, 3), 'LineWidth', 1)
 xlabel('Time [s]')
 ylabel('Roll rate [deg/s]')
 title('Roll rate for the spiral eigenmotion')
+grid
+xlim([0 600])
 
