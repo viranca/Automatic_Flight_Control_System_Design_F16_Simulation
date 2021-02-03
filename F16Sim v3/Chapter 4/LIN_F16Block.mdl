@@ -1,7 +1,7 @@
 Model {
   Name			  "LIN_F16Block"
   Version		  10.2
-  SavedCharacterEncoding  "UTF-8"
+  SavedCharacterEncoding  "US-ASCII"
   ModelUUID		  "0379ab21-a1da-474a-91c6-709eb6a0c330"
   GraphicalInterface {
     NumRootInports	    4
@@ -41,7 +41,7 @@ Model {
       UnitExpr		      "inherit"
     }
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.155"
+    ComputedModelVersion    "1.161"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -58,11 +58,11 @@ Model {
     OrderedModelArguments   1
   }
   LogicAnalyzerPlugin	  "on"
-  SLCCPlugin		  "on"
-  DiagnosticSuppressor	  "on"
-  AnimationPlugin	  "on"
-  slcheck_filter_plugin	  "on"
   WebScopes_FoundationPlugin "on"
+  SLCCPlugin		  "on"
+  slcheck_filter_plugin	  "on"
+  AnimationPlugin	  "on"
+  DiagnosticSuppressor	  "on"
   NotesPlugin		  "on"
   EnableAccessToBaseWorkspace on
   ScopeRefreshTime	  0.035000
@@ -74,7 +74,7 @@ Model {
   MinMaxOverflowArchiveMode "Overwrite"
   FPTRunName		  "Run 1"
   MaxMDLFileLineLength	  120
-  LastSavedArchitecture	  "maci64"
+  LastSavedArchitecture	  "win64"
   Object {
     $PropName		    "BdWindowsInfo"
     $ObjectID		    1
@@ -84,7 +84,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [8.0, 33.0, 1358.0, 814.0]
+      Location		      [-7.0, -7.0, 2062.0, 1126.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -111,10 +111,10 @@ Model {
 	  IsTabbed		  [1]
 	  ViewObjType		  "SimulinkTopLevel"
 	  LoadSaveID		  "0"
-	  Extents		  [1320.0, 579.0]
-	  ZoomFactor		  [1.0]
-	  Offset		  [115.42202814136044, 157.03391870265796]
-	  SceneRectInView	  [115.42202814136044, 157.03391870265796, 1320.0, 579.0]
+	  Extents		  [2515.0, 1115.0]
+	  ZoomFactor		  [1.25]
+	  Offset		  [-56.894291615349857, -26.643340160628753]
+	  SceneRectInView	  [-56.894291615349857, -26.643340160628753, 1609.6, 713.6]
 	}
 	Object {
 	  $ObjectID		  6
@@ -152,8 +152,8 @@ Model {
 	  UserData		  ""
 	  Floating		  [0]
 	  DockPosition		  "Right"
-	  Width			  [640]
-	  Height		  [480]
+	  Width			  [512]
+	  Height		  [384]
 	  Minimized		  "Unset"
 	}
 	Object {
@@ -165,18 +165,18 @@ Model {
 	  UserData		  "{\"filterShowRefModels\":\"true\",\"filterShowRefSubs\":\"true\",\"filterShowOnlyDirtyFiles\":\"false\"}\n"
 	  Floating		  [0]
 	  DockPosition		  "Left"
-	  Width			  [640]
-	  Height		  [480]
+	  Width			  [512]
+	  Height		  [384]
 	  Minimized		  "Unset"
 	}
 	PropName		"DockComponentsInfo"
       }
       WindowState	      "AAAA/wAAAAD9AAAAAgAAAAAAAAC9AAAB+PwCAAAABPsAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAA"
       "AAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0Ac"
-      "ABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAABrAP////sAAABgAFMAaQBtAHUAb"
+      "ABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAAB5AP////sAAABgAFMAaQBtAHUAb"
       "ABpAG4AawA6AEUAZABpAHQAbwByADoAUgBlAGYAZQByAGUAbgBjAGUAZABGAGkAbABlAHMALwBSAGUAZgBlAHIAZQBuAGMAZQBkACAARgBpAGwAZ"
-      "QBzAAAAAAD/////AAAAjwD///8AAAABAAAAAAAAAAD8AgAAAAH7AAAAVABHAEwAVQBFADIAOgBQAHIAbwBwAGUAcgB0AHkASQBuAHMAcABlAGMAd"
-      "ABvAHIALwBQAHIAbwBwAGUAcgB0AHkAIABJAG4AcwBwAGUAYwB0AG8AcgAAAAAA/////wAAAawA////AAAFTgAAAoAAAAABAAAAAgAAAAEAAAAC/"
+      "QBzAAAAAAD/////AAAApwD///8AAAABAAAAAAAAAAD8AgAAAAH7AAAAVABHAEwAVQBFADIAOgBQAHIAbwBwAGUAcgB0AHkASQBuAHMAcABlAGMAd"
+      "ABvAHIALwBQAHIAbwBwAGUAcgB0AHkAIABJAG4AcwBwAGUAYwB0AG8AcgAAAAAA/////wAAAhYA////AAAKAAAABKEAAAABAAAAAgAAAAEAAAAC/"
       "AAAAAA="
       Array {
 	Type			"Cell"
@@ -194,11 +194,11 @@ Model {
   Creator		  "keviczky"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "merelsterk"
+  LastModifiedBy	  "viran"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Feb 03 13:38:40 2021"
-  RTWModifiedTimeStamp	  534255021
-  ModelVersionFormat	  "%<AutoIncrement:1.155>"
+  LastModifiedDate	  "Tue Feb 02 04:03:20 2021"
+  RTWModifiedTimeStamp	  534139389
+  ModelVersionFormat	  "%<AutoIncrement:1.161>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "none"
@@ -1274,10 +1274,6 @@ Model {
       SampleTime	      "-1"
     }
     Block {
-      BlockType		      Scope
-      DefaultConfigurationName "Simulink.scopes.TimeScopeBlockCfg"
-    }
-    Block {
       BlockType		      SubSystem
       ShowPortLabels	      "FromPortIcon"
       Permissions	      "ReadWrite"
@@ -1355,7 +1351,7 @@ Model {
   }
   System {
     Name		    "LIN_F16Block"
-    Location		    [8, 33, 1366, 847]
+    Location		    [-7, -7, 2055, 1119]
     SystemRect		    [0.000000, 0.000000, 0.000000, 0.000000]
     Open		    on
     PortBlocksUseCompactNotation off
@@ -1371,9 +1367,9 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "100"
+    ZoomFactor		    "125"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "120"
+    SIDHighWatermark	    "125"
     SimulinkSubDomain	    "Simulink"
     Block {
       BlockType		      Inport
@@ -1381,6 +1377,8 @@ Model {
       SID		      "1"
       Position		      [15, 28, 45, 42]
       ZOrder		      -1
+      FontName		      "Arial"
+      FontSize		      12
     }
     Block {
       BlockType		      Inport
@@ -1388,6 +1386,8 @@ Model {
       SID		      "2"
       Position		      [15, 78, 45, 92]
       ZOrder		      -2
+      FontName		      "Arial"
+      FontSize		      12
       Port		      "2"
     }
     Block {
@@ -1396,6 +1396,8 @@ Model {
       SID		      "3"
       Position		      [15, 128, 45, 142]
       ZOrder		      -3
+      FontName		      "Arial"
+      FontSize		      12
       Port		      "3"
     }
     Block {
@@ -1404,6 +1406,8 @@ Model {
       SID		      "4"
       Position		      [15, 178, 45, 192]
       ZOrder		      -4
+      FontName		      "Arial"
+      FontSize		      12
       Port		      "4"
     }
     Block {
@@ -1415,6 +1419,8 @@ Model {
       ZOrder		      -5
       AncestorBlock	      "F16_Actuator_Library/Aileron\nActuator"
       LibraryVersion	      "*"
+      FontName		      "Arial"
+      FontSize		      12
       RequestExecContextInheritance off
       System {
 	Name			"Aileron\nActuator"
@@ -1531,10 +1537,12 @@ Model {
       Name		      "Demux"
       SID		      "6"
       Ports		      [1, 2]
-      Position		      [480, 88, 485, 172]
+      Position		      [505, 88, 510, 172]
       ZOrder		      -6
       BackgroundColor	      "black"
       ShowName		      off
+      FontName		      "Arial"
+      FontSize		      12
       Outputs		      "[12 6]"
       DisplayOption	      "none"
     }
@@ -1543,8 +1551,10 @@ Model {
       Name		      "Demux1"
       SID		      "96"
       Ports		      [1, 5]
-      Position		      [345, 476, 360, 584]
+      Position		      [375, 306, 390, 414]
       ZOrder		      6
+      FontName		      "Arial"
+      FontSize		      12
       Outputs		      "[10 1 3 1 3]"
       Port {
 	PortNumber		2
@@ -1557,38 +1567,13 @@ Model {
     }
     Block {
       BlockType		      Display
-      Name		      "Display"
-      SID		      "100"
-      Ports		      [1]
-      Position		      [460, 305, 550, 475]
-      ZOrder		      58
-      Decimation	      "1"
-    }
-    Block {
-      BlockType		      Display
-      Name		      "Display1"
-      SID		      "101"
-      Ports		      [1]
-      Position		      [460, 535, 550, 585]
-      ZOrder		      59
-      Decimation	      "1"
-    }
-    Block {
-      BlockType		      Display
       Name		      "Display2"
       SID		      "112"
       Ports		      [1]
-      Position		      [1005, 490, 1095, 540]
+      Position		      [940, 320, 1030, 370]
       ZOrder		      70
-      Decimation	      "1"
-    }
-    Block {
-      BlockType		      Display
-      Name		      "Display4"
-      SID		      "104"
-      Ports		      [1]
-      Position		      [460, 645, 550, 705]
-      ZOrder		      62
+      FontName		      "Arial"
+      FontSize		      12
       Decimation	      "1"
     }
     Block {
@@ -1596,8 +1581,10 @@ Model {
       Name		      "Divide"
       SID		      "108"
       Ports		      [2, 1]
-      Position		      [750, 497, 780, 528]
+      Position		      [720, 332, 750, 363]
       ZOrder		      66
+      FontName		      "Arial"
+      FontSize		      12
       Inputs		      "*/"
     }
     Block {
@@ -1609,20 +1596,9 @@ Model {
       ZOrder		      -7
       AncestorBlock	      "F16_Actuator_Library/Elevator\nActuator"
       LibraryVersion	      "*"
+      FontName		      "Arial"
+      FontSize		      12
       RequestExecContextInheritance off
-      Port {
-	PortNumber		1
-	Array {
-	  Type			  "Struct"
-	  Dimension		  1
-	  MATStruct {
-	    Type		    "in"
-	    OpenLoop		    "on"
-	    BusElementName	    ""
-	  }
-	  PropName		  "LinearAnalysisIO"
-	}
-      }
       System {
 	Name			"Elevator\nActuator"
 	Location		[-7, -7, 2055, 1119]
@@ -1738,8 +1714,10 @@ Model {
       Name		      "F16 nlsim\nnlplant"
       SID		      "8"
       Ports		      [1, 1]
-      Position		      [395, 115, 455, 145]
+      Position		      [405, 115, 465, 145]
       ZOrder		      -8
+      FontName		      "Arial"
+      FontSize		      12
       MATLABFcn		      "nlplant"
       OutputDimensions	      "18"
       OutputSignalType	      "real"
@@ -1749,8 +1727,10 @@ Model {
       Name		      "F16_states"
       SID		      "9"
       Ports		      [1, 1]
-      Position		      [510, 95, 540, 125]
+      Position		      [565, 95, 595, 125]
       ZOrder		      -9
+      FontName		      "Arial"
+      FontSize		      12
       InitialCondition	      "trim_state_lin"
     }
     Block {
@@ -1761,6 +1741,8 @@ Model {
       Position		      [425, 256, 515, 274]
       ZOrder		      -10
       BlockMirror	      on
+      FontName		      "Arial"
+      FontSize		      12
       RequestExecContextInheritance off
       System {
 	Name			"Leading Edge Flap"
@@ -2673,7 +2655,7 @@ Model {
 	Annotation {
 	  SID			  "47"
 	  Name			  "see NASA Technical Paper 1538, p34"
-	  Position		  [408, 27, 576, 39]
+	  Position		  [408, 27, 576, 41]
 	  InternalMargins	  [0, 0, 0, 0]
 	  ForegroundColor	  "blue"
 	  ZOrder		  -1
@@ -2681,14 +2663,14 @@ Model {
 	Annotation {
 	  SID			  "48"
 	  Name			  "Same as atmos() in nlplant...c"
-	  Position		  [363, 78, 496, 90]
+	  Position		  [363, 78, 496, 92]
 	  InternalMargins	  [0, 0, 0, 0]
 	  ZOrder		  -2
 	}
 	Annotation {
 	  SID			  "49"
 	  Name			  "Initialize LF_state with -alpha0 value in degrees!!!!"
-	  Position		  [354, 412, 577, 424]
+	  Position		  [354, 412, 577, 426]
 	  InternalMargins	  [0, 0, 0, 0]
 	  ZOrder		  -3
 	}
@@ -2699,8 +2681,10 @@ Model {
       Name		      "Mux"
       SID		      "116"
       Ports		      [2, 1]
-      Position		      [1335, 256, 1340, 294]
+      Position		      [960, 251, 965, 289]
       ZOrder		      74
+      FontName		      "Arial"
+      FontSize		      12
       Inputs		      "2"
       DisplayOption	      "bar"
     }
@@ -2712,6 +2696,8 @@ Model {
       Position		      [195, 12, 200, 208]
       ZOrder		      -11
       ShowName		      off
+      FontName		      "Arial"
+      FontSize		      12
       DisplayOption	      "bar"
     }
     Block {
@@ -2719,9 +2705,11 @@ Model {
       Name		      "Mux4"
       SID		      "51"
       Ports		      [2, 1]
-      Position		      [590, 88, 595, 172]
+      Position		      [675, 88, 680, 172]
       ZOrder		      -12
       ShowName		      off
+      FontName		      "Arial"
+      FontSize		      12
       Inputs		      "2"
       DisplayOption	      "bar"
     }
@@ -2733,6 +2721,8 @@ Model {
       Position		      [365, 59, 370, 196]
       ZOrder		      -13
       ShowName		      off
+      FontName		      "Arial"
+      FontSize		      12
       Inputs		      "[12 4 1 1]"
       DisplayOption	      "bar"
     }
@@ -2741,8 +2731,10 @@ Model {
       Name		      "Product"
       SID		      "107"
       Ports		      [2, 1]
-      Position		      [670, 487, 700, 518]
+      Position		      [665, 317, 695, 348]
       ZOrder		      65
+      FontName		      "Arial"
+      FontSize		      12
     }
     Block {
       BlockType		      SubSystem
@@ -2753,6 +2745,8 @@ Model {
       ZOrder		      -14
       AncestorBlock	      "F16_Actuator_Library/Rudder\nActuator"
       LibraryVersion	      "*"
+      FontName		      "Arial"
+      FontSize		      12
       RequestExecContextInheritance off
       System {
 	Name			"Rudder\nActuator"
@@ -2865,52 +2859,42 @@ Model {
       }
     }
     Block {
-      BlockType		      Scope
-      Name		      "Scope"
-      SID		      "115"
-      Ports		      [1]
-      Position		      [995, 571, 1190, 679]
-      ZOrder		      73
-      ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
-      "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
-      "ources','WiredSimulink',true),extmgr.Configuration('Visuals','Time Domain',true,'SerializedDisplays',{struct('Mi"
-      "nYLimReal','0.64348','MaxYLimReal','1.07275','YLabelReal','','MinYLimMag','0.64348','MaxYLimMag','1.07275','Lege"
-      "ndVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274"
-      "509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.6235294"
-      "11764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.7176470"
-      "58823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<SignalLab"
-      "el>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',1,'LineNames',{{'Sum'}},'ShowContent',"
-      "true,'Placement',1)},'DisplayPropertyDefaults',struct('MinYLimReal','0.64348','MaxYLimReal','1.07275','YLabelRea"
-      "l','','MinYLimMag','0.64348','MaxYLimMag','1.07275','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagP"
-      "hase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOr"
-      "der',[0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;1 1 0.0666666666666667;0.71764"
-      "7058823529 0.274509803921569 1;0.392156862745098 0.831372549019608 0.0745098039215686;0.0588235294117647 1 1;1 0"
-      ".0745098039215686 0.650980392156863])),extmgr.Configuration('Tools','Plot Navigation',true,'OnceAtStop',false,'P"
-      "reviousZoomMode','Pan'),extmgr.Configuration('Tools','Measurements',true,'Version','2020b')),'Version','2020b')"
-      NumInputPorts	      "1"
-      Floating		      off
-    }
-    Block {
       BlockType		      Sum
       Name		      "Sum"
       SID		      "110"
       Ports		      [2, 1]
-      Position		      [855, 505, 875, 525]
+      Position		      [825, 335, 845, 355]
       ZOrder		      68
+      FontName		      "Arial"
+      FontSize		      12
       Inputs		      "|++"
-      Port {
-	PortNumber		1
-	Array {
-	  Type			  "Struct"
-	  Dimension		  1
-	  MATStruct {
-	    Type		    "out"
-	    OpenLoop		    "on"
-	    BusElementName	    ""
-	  }
-	  PropName		  "LinearAnalysisIO"
-	}
-      }
+    }
+    Block {
+      BlockType		      Terminator
+      Name		      "Terminator"
+      SID		      "121"
+      Position		      [480, 310, 500, 330]
+      ZOrder		      76
+      FontName		      "Arial"
+      FontSize		      12
+    }
+    Block {
+      BlockType		      Terminator
+      Name		      "Terminator1"
+      SID		      "123"
+      Position		      [480, 350, 500, 370]
+      ZOrder		      77
+      FontName		      "Arial"
+      FontSize		      12
+    }
+    Block {
+      BlockType		      Terminator
+      Name		      "Terminator2"
+      SID		      "124"
+      Position		      [480, 390, 500, 410]
+      ZOrder		      78
+      FontName		      "Arial"
+      FontSize		      12
     }
     Block {
       BlockType		      SubSystem
@@ -2921,6 +2905,8 @@ Model {
       ZOrder		      -15
       AncestorBlock	      "F16_Actuator_Library/Thrust\nModel"
       LibraryVersion	      "*"
+      FontName		      "Arial"
+      FontSize		      12
       RequestExecContextInheritance off
       System {
 	Name			"Thrust\nModel"
@@ -3037,14 +3023,18 @@ Model {
       SID		      "55"
       Position		      [290, 165, 320, 195]
       ZOrder		      -16
+      FontName		      "Arial"
+      FontSize		      12
       Value		      "fi_flag_Simulink"
     }
     Block {
       BlockType		      Constant
       Name		      "g_D"
       SID		      "106"
-      Position		      [600, 545, 630, 575]
+      Position		      [595, 345, 625, 375]
       ZOrder		      64
+      FontName		      "Arial"
+      FontSize		      12
       Value		      "9.80665"
     }
     Block {
@@ -3052,8 +3042,10 @@ Model {
       Name		      "rad2deg"
       SID		      "56"
       Ports		      [1, 1]
-      Position		      [670, 116, 695, 144]
+      Position		      [720, 116, 745, 144]
       ZOrder		      -17
+      FontName		      "Arial"
+      FontSize		      12
       RequestExecContextInheritance off
       System {
 	Name			"rad2deg"
@@ -3367,7 +3359,7 @@ Model {
 	Annotation {
 	  SID			  "69"
 	  Name			  "npos,epos,alt"
-	  Position		  [122, 23, 171, 33]
+	  Position		  [122, 23, 172, 34]
 	  InternalMargins	  [0, 0, 0, 0]
 	  ZOrder		  -1
 	  FontSize		  8
@@ -3375,7 +3367,7 @@ Model {
 	Annotation {
 	  SID			  "70"
 	  Name			  "phi"
-	  Position		  [101, 53, 113, 63]
+	  Position		  [101, 53, 113, 64]
 	  InternalMargins	  [0, 0, 0, 0]
 	  ZOrder		  -2
 	  FontSize		  8
@@ -3383,7 +3375,7 @@ Model {
 	Annotation {
 	  SID			  "71"
 	  Name			  "theta"
-	  Position		  [102, 88, 121, 98]
+	  Position		  [102, 88, 122, 99]
 	  InternalMargins	  [0, 0, 0, 0]
 	  ZOrder		  -3
 	  FontSize		  8
@@ -3391,7 +3383,7 @@ Model {
 	Annotation {
 	  SID			  "72"
 	  Name			  "psi"
-	  Position		  [100, 115, 112, 125]
+	  Position		  [100, 115, 112, 126]
 	  InternalMargins	  [0, 0, 0, 0]
 	  ZOrder		  -4
 	  FontSize		  8
@@ -3399,7 +3391,7 @@ Model {
 	Annotation {
 	  SID			  "73"
 	  Name			  "v"
-	  Position		  [98, 148, 104, 158]
+	  Position		  [98, 148, 104, 159]
 	  InternalMargins	  [0, 0, 0, 0]
 	  ZOrder		  -5
 	  FontSize		  8
@@ -3407,7 +3399,7 @@ Model {
 	Annotation {
 	  SID			  "74"
 	  Name			  "alpha"
-	  Position		  [105, 177, 126, 187]
+	  Position		  [105, 177, 127, 188]
 	  InternalMargins	  [0, 0, 0, 0]
 	  ZOrder		  -6
 	  FontSize		  8
@@ -3415,7 +3407,7 @@ Model {
 	Annotation {
 	  SID			  "75"
 	  Name			  "beta"
-	  Position		  [103, 205, 120, 215]
+	  Position		  [103, 205, 121, 216]
 	  InternalMargins	  [0, 0, 0, 0]
 	  ZOrder		  -7
 	  FontSize		  8
@@ -3423,7 +3415,7 @@ Model {
 	Annotation {
 	  SID			  "76"
 	  Name			  "p"
-	  Position		  [103, 238, 109, 248]
+	  Position		  [103, 238, 110, 249]
 	  InternalMargins	  [0, 0, 0, 0]
 	  ZOrder		  -8
 	  FontSize		  8
@@ -3431,7 +3423,7 @@ Model {
 	Annotation {
 	  SID			  "77"
 	  Name			  "q"
-	  Position		  [100, 267, 106, 277]
+	  Position		  [100, 267, 106, 278]
 	  InternalMargins	  [0, 0, 0, 0]
 	  ZOrder		  -9
 	  FontSize		  8
@@ -3439,7 +3431,7 @@ Model {
 	Annotation {
 	  SID			  "78"
 	  Name			  "r"
-	  Position		  [102, 294, 106, 304]
+	  Position		  [102, 294, 106, 305]
 	  InternalMargins	  [0, 0, 0, 0]
 	  ZOrder		  -10
 	  FontSize		  8
@@ -3447,7 +3439,7 @@ Model {
 	Annotation {
 	  SID			  "79"
 	  Name			  "nx,ny,nz"
-	  Position		  [114, 325, 145, 335]
+	  Position		  [114, 325, 145, 336]
 	  InternalMargins	  [0, 0, 0, 0]
 	  ZOrder		  -11
 	  FontSize		  8
@@ -3455,7 +3447,7 @@ Model {
 	Annotation {
 	  SID			  "80"
 	  Name			  "mach,qbar,ps"
-	  Position		  [121, 358, 170, 368]
+	  Position		  [121, 358, 170, 369]
 	  InternalMargins	  [0, 0, 0, 0]
 	  ZOrder		  -12
 	  FontSize		  8
@@ -3466,16 +3458,20 @@ Model {
       BlockType		      Constant
       Name		      "x_a"
       SID		      "105"
-      Position		      [600, 460, 630, 490]
+      Position		      [595, 290, 625, 320]
       ZOrder		      63
+      FontName		      "Arial"
+      FontSize		      12
       Value		      "0"
     }
     Block {
       BlockType		      Outport
       Name		      "y"
       SID		      "117"
-      Position		      [1425, 268, 1455, 282]
+      Position		      [1050, 263, 1080, 277]
       ZOrder		      75
+      FontName		      "Arial"
+      FontSize		      12
     }
     Line {
       ZOrder		      1
@@ -3488,10 +3484,10 @@ Model {
       ZOrder		      2
       SrcBlock		      "F16 nlsim\nnlplant"
       SrcPort		      1
-      Points		      [3, 0]
+      Points		      [13, 0]
       Branch {
 	ZOrder			28
-	Points			[0, 101; -142, 0; 0, 299]
+	Points			[0, 96; -140, 0; 0, 134]
 	DstBlock		"Demux1"
 	DstPort			1
       }
@@ -3535,7 +3531,7 @@ Model {
       Labels		      [0, 0]
       SrcBlock		      "rad2deg"
       SrcPort		      1
-      Points		      [316, 0; 0, 135]
+      Points		      [61, 0; 0, 130]
       DstBlock		      "Mux"
       DstPort		      1
     }
@@ -3543,16 +3539,16 @@ Model {
       ZOrder		      8
       SrcBlock		      "F16_states"
       SrcPort		      1
-      Points		      [20, 0]
+      Points		      [26, 0]
       Branch {
-	ZOrder			10
-	DstBlock		"Mux4"
+	ZOrder			11
+	Points			[0, -85; -376, 0; 0, 50]
+	DstBlock		"Mux5"
 	DstPort			1
       }
       Branch {
-	ZOrder			11
-	Points			[0, -85; -315, 0; 0, 50]
-	DstBlock		"Mux5"
+	ZOrder			10
+	DstBlock		"Mux4"
 	DstPort			1
       }
       Branch {
@@ -3634,15 +3630,16 @@ Model {
       DstPort		      1
     }
     Line {
-      ZOrder		      37
+      ZOrder		      103
       SrcBlock		      "Demux1"
       SrcPort		      1
-      Points		      [45, 0; 0, -100]
-      DstBlock		      "Display"
+      DstBlock		      "Terminator"
       DstPort		      1
     }
     Line {
       Name		      "qdot"
+      FontName		      "Arial"
+      FontSize		      12
       ZOrder		      43
       Labels		      [1, 1]
       SrcBlock		      "Demux1"
@@ -3651,29 +3648,29 @@ Model {
       DstPort		      2
     }
     Line {
-      ZOrder		      39
+      ZOrder		      104
       SrcBlock		      "Demux1"
       SrcPort		      3
-      Points		      [45, 0; 0, 30]
-      DstBlock		      "Display1"
+      DstBlock		      "Terminator1"
       DstPort		      1
     }
     Line {
       Name		      "nz"
+      FontName		      "Arial"
+      FontSize		      12
       ZOrder		      47
       Labels		      [2, 0]
       SrcBlock		      "Demux1"
       SrcPort		      4
-      Points		      [27, 0; 0, 61; 473, 0]
+      Points		      [157, 0; 0, 31; 283, 0]
       DstBlock		      "Sum"
       DstPort		      2
     }
     Line {
-      ZOrder		      41
+      ZOrder		      105
       SrcBlock		      "Demux1"
       SrcPort		      5
-      Points		      [8, 0; 0, 105]
-      DstBlock		      "Display4"
+      DstBlock		      "Terminator2"
       DstPort		      1
     }
     Line {
@@ -3688,6 +3685,7 @@ Model {
       ZOrder		      45
       SrcBlock		      "Product"
       SrcPort		      1
+      Points		      [5, 0]
       DstBlock		      "Divide"
       DstPort		      1
     }
@@ -3695,7 +3693,7 @@ Model {
       ZOrder		      46
       SrcBlock		      "g_D"
       SrcPort		      1
-      Points		      [90, 0; 0, -40]
+      Points		      [75, 0]
       DstBlock		      "Divide"
       DstPort		      2
     }
@@ -3703,6 +3701,7 @@ Model {
       ZOrder		      48
       SrcBlock		      "Divide"
       SrcPort		      1
+      Points		      [33, 0; 0, -5]
       DstBlock		      "Sum"
       DstPort		      1
     }
@@ -3710,27 +3709,17 @@ Model {
       ZOrder		      50
       SrcBlock		      "Sum"
       SrcPort		      1
-      Points		      [61, 0]
+      Points		      [26, 0]
       Branch {
 	ZOrder			98
-	Points			[0, -230]
+	Points			[0, -65]
 	DstBlock		"Mux"
 	DstPort			2
       }
       Branch {
 	ZOrder			97
-	Points			[16, 0]
-	Branch {
-	  ZOrder		  54
-	  Points		  [0, 110]
-	  DstBlock		  "Scope"
-	  DstPort		  1
-	}
-	Branch {
-	  ZOrder		  53
-	  DstBlock		  "Display2"
-	  DstPort		  1
-	}
+	DstBlock		"Display2"
+	DstPort			1
       }
     }
     Line {
@@ -3743,27 +3732,22 @@ Model {
     Annotation {
       SID		      "82"
       Name		      "npos\nepos\nalt\nphi\ntheta\npsi\nvel\nalpha\nbeta\np\nq\nr\nnx\nny\nnz\nmach\nqbar\nps\n"
-      Position		      [636, -85, 657, 69]
+      Position		      [819, -13, 850, 255]
       InternalMargins	      [0, 0, 0, 0]
       ForegroundColor	      "blue"
       ZOrder		      -1
-      FontSize		      8
+      FontName		      "Arial"
+      FontSize		      12
     }
     Annotation {
-      SID		      "83"
-      Name		      "University of Minnesota / Honeywell\nDate : June 1st, 2000"
-      Position		      [794, 50, 954, 72]
+      SID		      "125"
+      Name		      "a_n\n"
+      Position		      [879, 280, 901, 310]
       InternalMargins	      [0, 0, 0, 0]
       ForegroundColor	      "blue"
-      ZOrder		      -2
-    }
-    Annotation {
-      SID		      "84"
-      Name		      "Nonlinear Equations of plant :\nRef : Aircraft Control & Simulation\n- Stevens & Lewis"
-      Position		      [170, 305, 320, 337]
-      InternalMargins	      [0, 0, 0, 0]
-      ForegroundColor	      "blue"
-      ZOrder		      -3
+      ZOrder		      -1
+      FontName		      "Arial"
+      FontSize		      12
     }
   }
 }
