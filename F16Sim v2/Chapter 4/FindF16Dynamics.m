@@ -341,5 +341,20 @@ step(a_n, t)
 ylabel('a_n [m/s^2]')
 
 %print zeros
-zero(TF)
+[z,gain] = zero(TF)
 
+%step response
+t_1 = 0:1:1000;
+t_2 = 0:0.01:8;
+t_3 = 0:0.01:1;
+
+
+figure;
+step(a_n, t_1)
+ylabel('a_n [m/s^2]')
+figure;
+step(a_n, t_2)
+ylabel('a_n [m/s^2]')
+figure;
+step(a_n, t_3)
+ylabel('a_n [m/s^2]')
