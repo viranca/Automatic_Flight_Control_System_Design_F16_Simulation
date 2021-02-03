@@ -1,7 +1,7 @@
 Model {
   Name			  "LIN_F16Block"
   Version		  10.2
-  SavedCharacterEncoding  "US-ASCII"
+  SavedCharacterEncoding  "UTF-8"
   ModelUUID		  "0379ab21-a1da-474a-91c6-709eb6a0c330"
   GraphicalInterface {
     NumRootInports	    4
@@ -41,7 +41,7 @@ Model {
       UnitExpr		      "inherit"
     }
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.154"
+    ComputedModelVersion    "1.155"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -58,11 +58,11 @@ Model {
     OrderedModelArguments   1
   }
   LogicAnalyzerPlugin	  "on"
-  WebScopes_FoundationPlugin "on"
   SLCCPlugin		  "on"
-  slcheck_filter_plugin	  "on"
-  AnimationPlugin	  "on"
   DiagnosticSuppressor	  "on"
+  AnimationPlugin	  "on"
+  slcheck_filter_plugin	  "on"
+  WebScopes_FoundationPlugin "on"
   NotesPlugin		  "on"
   EnableAccessToBaseWorkspace on
   ScopeRefreshTime	  0.035000
@@ -74,7 +74,7 @@ Model {
   MinMaxOverflowArchiveMode "Overwrite"
   FPTRunName		  "Run 1"
   MaxMDLFileLineLength	  120
-  LastSavedArchitecture	  "win64"
+  LastSavedArchitecture	  "maci64"
   Object {
     $PropName		    "BdWindowsInfo"
     $ObjectID		    1
@@ -84,7 +84,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [-1351.0, -7.0, 1358.0, 814.0]
+      Location		      [8.0, 33.0, 1358.0, 814.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -111,10 +111,10 @@ Model {
 	  IsTabbed		  [1]
 	  ViewObjType		  "SimulinkTopLevel"
 	  LoadSaveID		  "0"
-	  Extents		  [1635.0, 725.0]
+	  Extents		  [1320.0, 579.0]
 	  ZoomFactor		  [1.0]
-	  Offset		  [-33.577971858640694, 252.53391870265796]
-	  SceneRectInView	  [-33.577971858640694, 252.53391870265796, 1308.0, 580.0]
+	  Offset		  [115.42202814136044, 157.03391870265796]
+	  SceneRectInView	  [115.42202814136044, 157.03391870265796, 1320.0, 579.0]
 	}
 	Object {
 	  $ObjectID		  6
@@ -152,8 +152,8 @@ Model {
 	  UserData		  ""
 	  Floating		  [0]
 	  DockPosition		  "Right"
-	  Width			  [512]
-	  Height		  [384]
+	  Width			  [640]
+	  Height		  [480]
 	  Minimized		  "Unset"
 	}
 	Object {
@@ -165,18 +165,18 @@ Model {
 	  UserData		  "{\"filterShowRefModels\":\"true\",\"filterShowRefSubs\":\"true\",\"filterShowOnlyDirtyFiles\":\"false\"}\n"
 	  Floating		  [0]
 	  DockPosition		  "Left"
-	  Width			  [512]
-	  Height		  [384]
+	  Width			  [640]
+	  Height		  [480]
 	  Minimized		  "Unset"
 	}
 	PropName		"DockComponentsInfo"
       }
       WindowState	      "AAAA/wAAAAD9AAAAAgAAAAAAAAC9AAAB+PwCAAAABPsAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAA"
       "AAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0Ac"
-      "ABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAAB5AP////sAAABgAFMAaQBtAHUAb"
+      "ABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAABrAP////sAAABgAFMAaQBtAHUAb"
       "ABpAG4AawA6AEUAZABpAHQAbwByADoAUgBlAGYAZQByAGUAbgBjAGUAZABGAGkAbABlAHMALwBSAGUAZgBlAHIAZQBuAGMAZQBkACAARgBpAGwAZ"
-      "QBzAAAAAAD/////AAAApwD///8AAAABAAAAAAAAAAD8AgAAAAH7AAAAVABHAEwAVQBFADIAOgBQAHIAbwBwAGUAcgB0AHkASQBuAHMAcABlAGMAd"
-      "ABvAHIALwBQAHIAbwBwAGUAcgB0AHkAIABJAG4AcwBwAGUAYwB0AG8AcgAAAAAA/////wAAAhYA////AAAGkAAAAxsAAAABAAAAAgAAAAEAAAAC/"
+      "QBzAAAAAAD/////AAAAjwD///8AAAABAAAAAAAAAAD8AgAAAAH7AAAAVABHAEwAVQBFADIAOgBQAHIAbwBwAGUAcgB0AHkASQBuAHMAcABlAGMAd"
+      "ABvAHIALwBQAHIAbwBwAGUAcgB0AHkAIABJAG4AcwBwAGUAYwB0AG8AcgAAAAAA/////wAAAawA////AAAFTgAAAoAAAAABAAAAAgAAAAEAAAAC/"
       "AAAAAA="
       Array {
 	Type			"Cell"
@@ -194,11 +194,11 @@ Model {
   Creator		  "keviczky"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "viran"
+  LastModifiedBy	  "merelsterk"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sun Jan 31 22:49:06 2021"
-  RTWModifiedTimeStamp	  534034145
-  ModelVersionFormat	  "%<AutoIncrement:1.154>"
+  LastModifiedDate	  "Wed Feb 03 13:38:40 2021"
+  RTWModifiedTimeStamp	  534255021
+  ModelVersionFormat	  "%<AutoIncrement:1.155>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "none"
@@ -1355,7 +1355,7 @@ Model {
   }
   System {
     Name		    "LIN_F16Block"
-    Location		    [-1351, -7, 7, 807]
+    Location		    [8, 33, 1366, 847]
     SystemRect		    [0.000000, 0.000000, 0.000000, 0.000000]
     Open		    on
     PortBlocksUseCompactNotation off
@@ -2673,7 +2673,7 @@ Model {
 	Annotation {
 	  SID			  "47"
 	  Name			  "see NASA Technical Paper 1538, p34"
-	  Position		  [408, 27, 576, 41]
+	  Position		  [408, 27, 576, 39]
 	  InternalMargins	  [0, 0, 0, 0]
 	  ForegroundColor	  "blue"
 	  ZOrder		  -1
@@ -2681,14 +2681,14 @@ Model {
 	Annotation {
 	  SID			  "48"
 	  Name			  "Same as atmos() in nlplant...c"
-	  Position		  [363, 78, 496, 92]
+	  Position		  [363, 78, 496, 90]
 	  InternalMargins	  [0, 0, 0, 0]
 	  ZOrder		  -2
 	}
 	Annotation {
 	  SID			  "49"
 	  Name			  "Initialize LF_state with -alpha0 value in degrees!!!!"
-	  Position		  [354, 412, 577, 426]
+	  Position		  [354, 412, 577, 424]
 	  InternalMargins	  [0, 0, 0, 0]
 	  ZOrder		  -3
 	}
@@ -3367,7 +3367,7 @@ Model {
 	Annotation {
 	  SID			  "69"
 	  Name			  "npos,epos,alt"
-	  Position		  [122, 23, 172, 34]
+	  Position		  [122, 23, 171, 33]
 	  InternalMargins	  [0, 0, 0, 0]
 	  ZOrder		  -1
 	  FontSize		  8
@@ -3375,7 +3375,7 @@ Model {
 	Annotation {
 	  SID			  "70"
 	  Name			  "phi"
-	  Position		  [101, 53, 113, 64]
+	  Position		  [101, 53, 113, 63]
 	  InternalMargins	  [0, 0, 0, 0]
 	  ZOrder		  -2
 	  FontSize		  8
@@ -3383,7 +3383,7 @@ Model {
 	Annotation {
 	  SID			  "71"
 	  Name			  "theta"
-	  Position		  [102, 88, 122, 99]
+	  Position		  [102, 88, 121, 98]
 	  InternalMargins	  [0, 0, 0, 0]
 	  ZOrder		  -3
 	  FontSize		  8
@@ -3391,7 +3391,7 @@ Model {
 	Annotation {
 	  SID			  "72"
 	  Name			  "psi"
-	  Position		  [100, 115, 112, 126]
+	  Position		  [100, 115, 112, 125]
 	  InternalMargins	  [0, 0, 0, 0]
 	  ZOrder		  -4
 	  FontSize		  8
@@ -3399,7 +3399,7 @@ Model {
 	Annotation {
 	  SID			  "73"
 	  Name			  "v"
-	  Position		  [98, 148, 104, 159]
+	  Position		  [98, 148, 104, 158]
 	  InternalMargins	  [0, 0, 0, 0]
 	  ZOrder		  -5
 	  FontSize		  8
@@ -3407,7 +3407,7 @@ Model {
 	Annotation {
 	  SID			  "74"
 	  Name			  "alpha"
-	  Position		  [105, 177, 127, 188]
+	  Position		  [105, 177, 126, 187]
 	  InternalMargins	  [0, 0, 0, 0]
 	  ZOrder		  -6
 	  FontSize		  8
@@ -3415,7 +3415,7 @@ Model {
 	Annotation {
 	  SID			  "75"
 	  Name			  "beta"
-	  Position		  [103, 205, 121, 216]
+	  Position		  [103, 205, 120, 215]
 	  InternalMargins	  [0, 0, 0, 0]
 	  ZOrder		  -7
 	  FontSize		  8
@@ -3423,7 +3423,7 @@ Model {
 	Annotation {
 	  SID			  "76"
 	  Name			  "p"
-	  Position		  [103, 238, 110, 249]
+	  Position		  [103, 238, 109, 248]
 	  InternalMargins	  [0, 0, 0, 0]
 	  ZOrder		  -8
 	  FontSize		  8
@@ -3431,7 +3431,7 @@ Model {
 	Annotation {
 	  SID			  "77"
 	  Name			  "q"
-	  Position		  [100, 267, 106, 278]
+	  Position		  [100, 267, 106, 277]
 	  InternalMargins	  [0, 0, 0, 0]
 	  ZOrder		  -9
 	  FontSize		  8
@@ -3439,7 +3439,7 @@ Model {
 	Annotation {
 	  SID			  "78"
 	  Name			  "r"
-	  Position		  [102, 294, 106, 305]
+	  Position		  [102, 294, 106, 304]
 	  InternalMargins	  [0, 0, 0, 0]
 	  ZOrder		  -10
 	  FontSize		  8
@@ -3447,7 +3447,7 @@ Model {
 	Annotation {
 	  SID			  "79"
 	  Name			  "nx,ny,nz"
-	  Position		  [114, 325, 145, 336]
+	  Position		  [114, 325, 145, 335]
 	  InternalMargins	  [0, 0, 0, 0]
 	  ZOrder		  -11
 	  FontSize		  8
@@ -3455,7 +3455,7 @@ Model {
 	Annotation {
 	  SID			  "80"
 	  Name			  "mach,qbar,ps"
-	  Position		  [121, 358, 170, 369]
+	  Position		  [121, 358, 170, 368]
 	  InternalMargins	  [0, 0, 0, 0]
 	  ZOrder		  -12
 	  FontSize		  8
@@ -3468,7 +3468,7 @@ Model {
       SID		      "105"
       Position		      [600, 460, 630, 490]
       ZOrder		      63
-      Value		      "1.524"
+      Value		      "0"
     }
     Block {
       BlockType		      Outport
@@ -3743,7 +3743,7 @@ Model {
     Annotation {
       SID		      "82"
       Name		      "npos\nepos\nalt\nphi\ntheta\npsi\nvel\nalpha\nbeta\np\nq\nr\nnx\nny\nnz\nmach\nqbar\nps\n"
-      Position		      [636, -85, 658, 88]
+      Position		      [636, -85, 657, 69]
       InternalMargins	      [0, 0, 0, 0]
       ForegroundColor	      "blue"
       ZOrder		      -1
@@ -3752,7 +3752,7 @@ Model {
     Annotation {
       SID		      "83"
       Name		      "University of Minnesota / Honeywell\nDate : June 1st, 2000"
-      Position		      [794, 50, 954, 76]
+      Position		      [794, 50, 954, 72]
       InternalMargins	      [0, 0, 0, 0]
       ForegroundColor	      "blue"
       ZOrder		      -2
@@ -3760,7 +3760,7 @@ Model {
     Annotation {
       SID		      "84"
       Name		      "Nonlinear Equations of plant :\nRef : Aircraft Control & Simulation\n- Stevens & Lewis"
-      Position		      [170, 305, 320, 343]
+      Position		      [170, 305, 320, 337]
       InternalMargins	      [0, 0, 0, 0]
       ForegroundColor	      "blue"
       ZOrder		      -3
