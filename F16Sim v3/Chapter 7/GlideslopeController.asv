@@ -11,7 +11,45 @@ D_red_lo = sel(D_longitude_lo,1:5,1:2);
 sys_lo=ss(A_red_lo,B_red_lo,C_red_lo,D_red_lo);
 
 
-sim GlideslopeController
+sim GlideslopeController_model
+
 
 
 %% Figures
+
+Altitude_plot = figure(1);
+plot(ans.Altitude{1}.Values(:))
+title('Altitude')
+xlabel('Time [s]');
+ylabel('Altitude [ft]');
+grid on
+
+
+Velocity_plot = figure(1);
+plot(ans.Velocity{1}.Values(:))
+title('Velocity')
+xlabel('Time [s]');
+ylabel('Velocity [ft]');
+grid on
+
+Alpha_plot = figure(1);
+plot(ans.Alpha{1}.Values(:))
+title('Alpha')
+xlabel('Time [s]');
+ylabel('Alpha [ft]');
+grid on
+
+Theta_plot = figure(1);
+plot(ans.Alpha{1}.Values(:))
+title('Alpha')
+xlabel('Time [s]');
+ylabel('Alpha [ft]');
+grid on
+
+Alpha_plot = figure(1);
+plot(ans.Alpha{1}.Values(:))
+title('Alpha')
+xlabel('Time [s]');
+ylabel('Alpha [ft]');
+grid on
+
