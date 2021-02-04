@@ -197,7 +197,7 @@ Model {
   LastModifiedBy	  "viran"
   ModifiedDateFormat	  "%<Auto>"
   LastModifiedDate	  "Thu Feb 04 16:33:10 2021"
-  RTWModifiedTimeStamp	  534357187
+  RTWModifiedTimeStamp	  534357201
   ModelVersionFormat	  "%<AutoIncrement:1.165>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -357,13 +357,13 @@ Model {
 	  Description		  ""
 	  Components		  []
 	  Decimation		  "50"
-	  ExternalInput		  "[t, u]"
+	  ExternalInput		  "[0 2120.62144781522 -2.46068617229408 2.37952298008892e-15 3.64793526166284e-14]"
 	  FinalStateName	  "xFinal"
-	  InitialState		  "xInitial"
+	  InitialState		  "[]"
 	  LimitDataPoints	  off
 	  MaxDataPoints		  "1000"
-	  LoadExternalInput	  off
-	  LoadInitialState	  off
+	  LoadExternalInput	  on
+	  LoadInitialState	  on
 	  SaveFinalState	  off
 	  SaveOperatingPoint	  off
 	  SaveFormat		  "Array"
@@ -414,7 +414,7 @@ Model {
 	  BlockReduction	  on
 	  BooleanDataType	  off
 	  ConditionallyExecuteInputs on
-	  DefaultParameterBehavior "Tunable"
+	  DefaultParameterBehavior "Inlined"
 	  UseDivisionForNetSlopeComputation "off"
 	  GainParamInheritBuiltInType off
 	  UseFloatMulNetSlope	  off
@@ -422,7 +422,7 @@ Model {
 	  UseSpecifiedMinMax	  off
 	  InlineInvariantSignals  off
 	  OptimizeBlockIOStorage  on
-	  BufferReuse		  on
+	  BufferReuse		  off
 	  EnhancedBackFolding	  off
 	  CachingGlobalReferences off
 	  GlobalBufferReuse	  on
@@ -554,7 +554,7 @@ Model {
 	  ChecksumConsistencyForSSReuse	"none"
 	  PregeneratedLibrarySubsystemCodeDiagnostic "warning"
 	  MatchCodeGenerationContextForUpdateDiagram "none"
-	  InitInArrayFormatMsg	  "warning"
+	  InitInArrayFormatMsg	  "none"
 	  StrictBusMsg		  "ErrorLevel1"
 	  BusNameAdapt		  "WarnAndRepair"
 	  NonBusSignalsTreatedAsBus "none"

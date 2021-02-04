@@ -341,6 +341,7 @@ step(a_n, t)
 ylabel('a_n [m/s^2]')
 
 %print zeros
+format long 
 [z,gain] = zero(TF)
 
 %step response
