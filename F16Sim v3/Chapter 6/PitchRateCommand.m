@@ -78,7 +78,7 @@ pole_2 = (-damp_ratio * nat_freq) - nat_freq * ((damp_ratio^2 - 1))^0.5;
 poles = [pole_1 pole_2];
 
 % Computing the gains
-gains = place(A_2s, B_2s, poles); % compute gain matrix
+gains = place(A_2s, B_2s, poles);       % compute gain matrix
 K_alpha = gains(1);                     % deg/rad
 K_q = gains(2);                         % deg/(rad/s)
 
@@ -101,8 +101,8 @@ s = tf('s');
 
 % Compute the current time constant
 H_CL_q = zpk(H_CL_q);
-[num, den] = ss2tf(A_2s, B_2s, C_2s, D_2s);
-time_con_cur = num(2, end-1)/num(2, end);                   % calculate current time constant from numerators of tf function
+[num, den] = ss2tf(A_2s, B_2s, C_2s, D_2s)
+time_con_cur = num(2, end-1)/num(2, end)                   % calculate current time constant from numerators of tf function
 
 % Compute transferfunction of lead-lag filter
 H_LL = (time_con_req * s + 1)/(time_con_cur * s + 1);       % a gain value K should be included
@@ -166,6 +166,6 @@ q_m = max(Y_q);                % Maximum pitch rate
 q_s = Y_q(500);                % Steady state value pitch Rate
 q_overshoot = q_m/q_s;         % Pitch rate overshoot ratio
 DB = max(Y_att) - Y_att(end);  % Dropback
-DB_div_q_s_design = DB/q_s;    % Gibson Criteria design
+DB_div_q_s_design = DB/q_s    % Gibson Criteria design
 
-DB_div_q_s_current = time_con_cur2 - ((2 * zeta_cur(1) )/ wn_cur(1));        %Gibson Criteria current
+DB_div_q_s_current = time_con_cur2 - ((2 * zeta_cur(1) )/ wn_cur(1))        %Gibson Criteria current
